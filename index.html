@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PinePath</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="pp-title-tr" content="PinePath">
+<meta name="pp-title-en" content="PinePath">
+<meta name="description" content="PinePath: yürüyüş, koşu, bisiklet ve ağırlık antrenmanlarını kaydet, konumuna özel rotalar keşfet, rotalarını 3D izle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+
+<style>body{margin:0}</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/icon.png" alt="">PinePath</a>
+    <nav class="topnav" aria-label="Sayfa">
+      <a class="nav-link" href="#ozellikler"><span class="tr">Özellikler</span><span class="en">Features</span></a>
+      <a class="nav-link" href="#premium">Premium</a>
+      <a class="nav-link" href="#sss"><span class="tr">SSS</span><span class="en">FAQ</span></a>
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button type="button" data-set-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-block:0">
+    <canvas class="contours" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tr">iPhone ve Apple Watch için</span><span class="en">For iPhone and Apple Watch</span></p>
+        <h1>
+          <span class="tr">Yürü, koş, pedalla.<br><em>Ormanını büyüt.</em></span>
+          <span class="en">Walk, run, ride.<br><em>Grow your forest.</em></span>
+        </h1>
+        <p class="lede">
+          <span class="tr">Antrenmanlarını kaydet, bulunduğun yerden başlayan rotalar keşfet, rotanı 3D izle. Yol arkadaşın her antrenmanda haftalık ormanına bir ağaç diker.</span>
+          <span class="en">Record your workouts, discover routes that start where you are and watch them in 3D. Your companion plants a tree in your weekly forest with every workout.</span>
+        </p>
+        <div class="cta-row">
+          <span class="btn btn-primary" role="note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.5-1-2.5-4zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
+            <span><small class="tr">Çok yakında</small><small class="en">Coming soon</small><span class="tr">App Store'da</span><span class="en">on the App Store</span></span>
+          </span>
+          <a class="btn btn-ghost" href="#ozellikler"><span class="tr">Özellikleri gör</span><span class="en">See features</span></a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4</strong><span class="tr">aktivite türü</span><span class="en">activity types</span></div>
+          <div><strong>6</strong><span class="tr">bisiklet tipi</span><span class="en">bike types</span></div>
+          <div><strong>3</strong><span class="tr">yol arkadaşı</span><span class="en">companions</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone">
+          <div class="island"></div>
+          <div class="screen">
+            <img class="tr" src="img/home-tr.jpg" alt="PinePath ana ekranı: maskot Ceviz, haftalık orman ve seri">
+            <img class="en" src="img/home-en.jpg" alt="PinePath home screen: Ceviz the bear, weekly forest and streak">
+          </div>
+        </div>
+        <div class="float-chip chip-elev" aria-hidden="true">
+          <div class="k"><span class="tr">Belgrad gravel turu</span><span class="en">Belgrad gravel ride</span></div>
+          <div class="v">40,56 km</div>
+          <svg viewBox="0 0 200 46"><path d="M0 40 C30 38 50 30 70 18 S110 2 130 6 S170 30 200 38" fill="none" stroke="#0f7a63" stroke-width="3" stroke-linecap="round"/><circle cx="130" cy="6" r="4" fill="#e5484d"/></svg>
+        </div>
+        <div class="float-chip chip-tree" aria-hidden="true">
+          <span class="tree">🌲</span>
+          <div><div class="k"><span class="tr">Bu hafta</span><span class="en">This week</span></div><div class="v">6/6</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap ruler" aria-hidden="true">
+    <svg></svg>
+    <div class="labels"><span>0 km</span><span>10</span><span>20</span><span>30</span><span>40,56 km</span></div>
+  </div>
+
+  <section id="ozellikler" style="padding-top:40px">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker"><span class="tr">Neler yapabilirsin</span><span class="en">What you can do</span></p>
+        <h2><span class="tr">Rotan, verin ve motivasyonun tek yerde</span><span class="en">Your routes, your data and your motivation in one place</span></h2>
+      </div>
+
+      <div class="feature">
+        <div class="phone"><div class="island"></div><div class="screen">
+          <img class="tr" src="img/flyover-tr.jpg" alt="Uydu görüntüsü üzerinde 3D rota turu" loading="lazy">
+          <img class="en" src="img/flyover-en.jpg" alt="3D route tour over satellite imagery" loading="lazy">
+        </div></div>
+        <div class="feature-copy">
+          <p class="kicker">3D</p>
+          <h3><span class="tr">Rotanın üzerinden 3D uç</span><span class="en">Fly over your route in 3D</span><span class="badge-premium">Premium</span></h3>
+          <p><span class="tr">Kamera, uydu görüntüsü ve gerçek arazi üzerinde rotanı takip eder. Çizgi ilerledikçe çizilir, yükseklik profili canlı ilerler.</span><span class="en">The camera follows your route over satellite imagery and real terrain. The line draws as you go and the elevation profile moves along with it.</span></p>
+          <ul>
+            <li><span class="tr">Oynatırken düğmeler gizlenir; iOS ekran kaydıyla video olarak paylaş.</span><span class="en">Controls hide during playback, so you can share it as a video with iOS screen recording.</span></li>
+            <li><span class="tr">Harita, hibrit ve uydu katmanları.</span><span class="en">Map, hybrid and satellite layers.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature flip">
+        <div class="phone"><div class="island"></div><div class="screen">
+          <img class="tr" src="img/model-tr.jpg" alt="Döndürülebilir 3D rota maketi ve paylaşım kartı" loading="lazy">
+          <img class="en" src="img/model-en.jpg" alt="Rotatable 3D route model and share card" loading="lazy">
+        </div></div>
+        <div class="feature-copy">
+          <p class="kicker"><span class="tr">Paylaş</span><span class="en">Share</span></p>
+          <h3><span class="tr">Rotan 3D bir esere dönüşsün</span><span class="en">Turn your route into 3D art</span></h3>
+          <p><span class="tr">Rotan, yüksekliği abartılmış bir maket olarak plakanın üzerinde yükselir. Parmağınla döndür, Orman, Gece ya da Kâğıt stilini seç.</span><span class="en">Your route rises from a base plate as a model with exaggerated elevation. Rotate it with your finger and pick the Forest, Night or Paper style.</span></p>
+          <ul>
+            <li><span class="tr">1080 × 1350 px kart: Instagram, WhatsApp ve Strava hikâyelerine hazır.</span><span class="en">1080 × 1350 px card, ready for Instagram, WhatsApp and Strava stories.</span></li>
+            <li><span class="tr">Mesafe, süre ve tırmanış kartın üzerinde.</span><span class="en">Distance, time and climbing printed on the card.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="phone"><div class="island"></div><div class="screen">
+          <img class="tr" src="img/map-tr.jpg" alt="Yüksekliğe göre renklenen rota ve aktivite istatistikleri" loading="lazy">
+          <img class="en" src="img/map-en.jpg" alt="Route colored by elevation and activity stats" loading="lazy">
+        </div></div>
+        <div class="feature-copy">
+          <p class="kicker"><span class="tr">Kayıt</span><span class="en">Recording</span></p>
+          <h3><span class="tr">Her detay, renk renk</span><span class="en">Every detail, in color</span></h3>
+          <p><span class="tr">GPS ile kaydettiğin ya da Apple Watch'tan gelen her antrenman; yüksekliğe veya hıza göre renklenen rota, km işaretleri, zirve noktası ve kilometre splitleriyle açılır.</span><span class="en">Every workout you record with GPS or bring in from Apple Watch opens with a route colored by elevation or speed, km markers, the peak and kilometer splits.</span></p>
+          <ul>
+            <li><span class="tr">Yürüyüş, koşu, doğa yürüyüşü, bisiklet ve ağırlık antrenmanı.</span><span class="en">Walking, running, hiking, cycling and strength training.</span></li>
+            <li><span class="tr">Türkçe ve İngilizce sesli koç; ekran kilitliyken de konuşur.</span><span class="en">Voice coach in Turkish and English that keeps talking with the screen locked.</span></li>
+            <li><span class="tr">Apple Sağlık senkronu: Garmin, Polar ve diğer saatlerin verisi de gelir.</span><span class="en">Apple Health sync brings in data from Garmin, Polar and other watches too.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid4">
+        <article class="tile">
+          <div class="shot"><img class="tr" src="img/explore-tr.jpg" alt="" loading="lazy"><img class="en" src="img/explore-en.jpg" alt="" loading="lazy"></div>
+          <div class="body"><h3><span class="tr">Konumuna özel rotalar</span><span class="en">Routes where you are</span></h3>
+            <p><span class="tr">Dağ (MTB)'ye dokun, Apple Haritalar yol ağıyla bulunduğun yerden başlayıp dönen 5 rota hazırlansın.</span><span class="en">Tap Mountain (MTB) and get 5 loops on the Apple Maps road network that start and end where you are.</span></p></div>
+        </article>
+        <article class="tile">
+          <div class="shot"><img class="tr" src="img/stats-tr.jpg" alt="" loading="lazy"><img class="en" src="img/stats-en.jpg" alt="" loading="lazy"></div>
+          <div class="body"><h3><span class="tr">İstatistik ve rekorlar</span><span class="en">Stats and records</span></h3>
+            <p><span class="tr">Haftalık trendler, aktivite dağılımı, kişisel rekorlar, nabız bölgeleri ve aktivite takvimi.</span><span class="en">Weekly trends, activity breakdown, personal records, heart rate zones and an activity calendar.</span></p></div>
+        </article>
+        <article class="tile">
+          <div class="shot"><img class="tr" src="img/plans-tr.jpg" alt="" loading="lazy"><img class="en" src="img/plans-en.jpg" alt="" loading="lazy"></div>
+          <div class="body"><h3><span class="tr">Antrenman planları</span><span class="en">Training plans</span></h3>
+            <p><span class="tr">Sıfırdan 5K, İlk 50 km, Gravel Dayanıklılık, Kuvvet Temeli ve daha fazlası. Tamamladığın antrenmanlar otomatik işaretlenir.</span><span class="en">Couch to 5K, First 50 km, Gravel Endurance, Strength Foundation and more. Completed sessions are checked off automatically.</span></p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mascots">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker"><span class="tr">Yol arkadaşları</span><span class="en">Companions</span></p>
+        <h2><span class="tr">Birini seç, beraber büyüyün</span><span class="en">Pick one and grow together</span></h2>
+        <p><span class="tr">Seçtiğin arkadaş ilerlemene göre neşelenir, her antrenmanda haftalık ormanına bir ağaç diker ve rozet kazandıkça seninle kutlar.</span><span class="en">Your companion cheers as you progress, plants a tree in your weekly forest with every workout and celebrates each badge with you.</span></p>
+      </div>
+      <div class="trio">
+        <div class="mascot"><div class="face" style="background:#fbe9ee">🐰</div><h3>Pamuk</h3><p class="sp"><span class="tr">Tavşan</span><span class="en">Rabbit</span></p><p><span class="tr">Enerjik ve hızlı. Yürüyüş ve koşuların neşesi.</span><span class="en">Energetic and fast. The joy of walks and runs.</span></p></div>
+        <div class="mascot"><div class="face" style="background:#f3e6d8">🐻</div><h3>Ceviz</h3><p class="sp"><span class="tr">Ayı</span><span class="en">Bear</span></p><p><span class="tr">Güçlü ve kararlı. Ağırlık ve dağ sürüşlerinin yoldaşı.</span><span class="en">Strong and determined. The companion for strength and mountain rides.</span></p></div>
+        <div class="mascot"><div class="face" style="background:#e7efe2">🦥</div><h3>Lokum</h3><p class="sp"><span class="tr">Tembel hayvan</span><span class="en">Sloth</span></p><p><span class="tr">Sakin ve istikrarlı. Yavaş ama emin adımlarla.</span><span class="en">Calm and steady. Slow but sure steps.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="premium">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Premium</p>
+        <h2><span class="tr">Kayıt her zaman ücretsiz. Keşif sınırsız.</span><span class="en">Recording is always free. Exploring is unlimited.</span></h2>
+        <p><span class="tr">Antrenman kaydı, Sağlık ve Watch senkronu, maskot ve rozetler ücretsiz. Premium; sınırsız rota, 3D tur, tüm geçmiş ve planları açar.</span><span class="en">Workout recording, Health and Watch sync, companions and badges are free. Premium unlocks unlimited routes, the 3D tour, full history and plans.</span></p>
+      </div>
+      <div class="plans">
+        <div class="plan"><p class="name"><span class="tr">Aylık</span><span class="en">Monthly</span></p><p class="price"><span class="tr">₺149,99</span><span class="en">₺149.99</span></p><p class="per"><span class="tr">/ ay</span><span class="en">/ month</span></p><p class="note"><span class="tr">İstediğin zaman iptal et.</span><span class="en">Cancel anytime.</span></p></div>
+        <div class="plan best" data-flag="★"><p class="name"><span class="tr">Yıllık</span><span class="en">Yearly</span></p><p class="price"><span class="tr">₺999,99</span><span class="en">₺999.99</span></p><p class="per"><span class="tr">/ yıl · aylık yaklaşık ₺83</span><span class="en">/ year · about ₺83 a month</span></p><p class="note"><span class="tr">7 gün ücretsiz deneme. Aile Paylaşımı dahil.</span><span class="en">7-day free trial. Family Sharing included.</span></p></div>
+        <div class="plan"><p class="name"><span class="tr">Ömür boyu</span><span class="en">Lifetime</span></p><p class="price"><span class="tr">₺2.499,99</span><span class="en">₺2,499.99</span></p><p class="per"><span class="tr">tek seferlik</span><span class="en">one-time</span></p><p class="note"><span class="tr">Abonelik yok, bir kez öde.</span><span class="en">No subscription, pay once.</span></p></div>
+      </div>
+      <div class="compare">
+        <table>
+          <thead><tr><th><span class="tr">Özellik</span><span class="en">Feature</span></th><th><span class="tr">Ücretsiz</span><span class="en">Free</span></th><th>Premium</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tr">Kayıt, Sağlık / Watch senkronu, maskot, rozetler</span><span class="en">Recording, Health / Watch sync, companions, badges</span></td><td>✓</td><td>✓</td></tr>
+            <tr><td><span class="tr">Konuma özel rota üretimi</span><span class="en">Location-based route generation</span></td><td><span class="tr">Haftada 2</span><span class="en">2 per week</span></td><td><span class="tr">Sınırsız</span><span class="en">Unlimited</span></td></tr>
+            <tr><td><span class="tr">İstatistik geçmişi</span><span class="en">Stats history</span></td><td><span class="tr">Son 30 gün</span><span class="en">Last 30 days</span></td><td><span class="tr">12 hafta / 1 yıl, rekorlar, nabız bölgeleri</span><span class="en">12 weeks / 1 year, records, HR zones</span></td></tr>
+            <tr><td><span class="tr">Antrenman planları</span><span class="en">Training plans</span></td><td><span class="tr">1 başlangıç planı</span><span class="en">1 starter plan</span></td><td><span class="tr">Tüm planlar</span><span class="en">All plans</span></td></tr>
+            <tr><td><span class="tr">3D rota turu</span><span class="en">3D route tour</span></td><td>—</td><td>✓</td></tr>
+            <tr><td><span class="tr">Sesli koç</span><span class="en">Voice coach</span></td><td><span class="tr">Her km</span><span class="en">Every km</span></td><td><span class="tr">0,5 / 2 km, zaman bazlı, hedef tempo</span><span class="en">0.5 / 2 km, time-based, target pace</span></td></tr>
+            <tr><td><span class="tr">GPX dışa aktarma</span><span class="en">GPX export</span></td><td>—</td><td>✓</td></tr>
+            <tr><td><span class="tr">Kaydedilen rotalar</span><span class="en">Saved routes</span></td><td>3</td><td><span class="tr">Sınırsız</span><span class="en">Unlimited</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine"><span class="tr">Fiyatlar Türkiye App Store fiyatlarıdır; diğer ülkelerde App Store yerel fiyatı gösterir. Abonelikler, dönem bitiminden en az 24 saat önce iptal edilmezse otomatik yenilenir ve Apple hesabından ücretlendirilir. Aboneliğini App Store hesap ayarlarından yönetebilirsin.</span><span class="en">Prices shown are Turkish App Store prices; in other regions the App Store shows your local price. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period and are charged to your Apple Account. Manage your subscription in your App Store account settings.</span></p>
+    </div>
+  </section>
+
+  <section style="background:var(--surface-2)">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker"><span class="tr">Gizlilik</span><span class="en">Privacy</span></p>
+        <h2><span class="tr">Konumun ve sağlık verin sende kalır</span><span class="en">Your location and health data stay yours</span></h2>
+      </div>
+      <div class="promise">
+        <div><h3><span class="tr">Reklam yok</span><span class="en">No ads</span></h3><p><span class="tr">Uygulamada reklam ve reklam amaçlı izleme yok. Verilerini satmayız.</span><span class="en">No ads and no ad tracking in the app. We don't sell your data.</span></p></div>
+        <div><h3><span class="tr">Önce cihazın</span><span class="en">Device first</span></h3><p><span class="tr">Veriler önce cihazdan yüklenir; sunucuya yalnızca değişen kayıtlar gider. Misafir olarak da kullanabilirsin.</span><span class="en">Data loads from your device first and only changed records go to the server. You can also use the app as a guest.</span></p></div>
+        <div><h3><span class="tr">Kontrol sende</span><span class="en">You're in control</span></h3><p><span class="tr">Hesabını ve bulut verilerini uygulamanın içinden tek dokunuşla silebilirsin.</span><span class="en">Delete your account and cloud data from inside the app with one tap.</span></p></div>
+      </div>
+      <p class="fine" style="margin-top:24px"><a href="privacy.html"><span class="tr">Gizlilik Politikası'nı oku →</span><span class="en">Read the Privacy Policy →</span></a></p>
+    </div>
+  </section>
+
+  <section id="sss">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker"><span class="tr">Sık sorulanlar</span><span class="en">FAQ</span></p>
+        <h2><span class="tr">Merak edilenler</span><span class="en">Questions</span></h2>
+      </div>
+      <div class="faq">
+        <details><summary><span class="tr">Apple Watch'ım yoksa kullanabilir miyim?</span><span class="en">Can I use it without an Apple Watch?</span></summary><p><span class="tr">Evet. iPhone'un GPS'iyle kayıt yaparsın. Garmin, Polar, Huawei gibi saatler verilerini Apple Sağlık'a yazıyorsa onlar da otomatik gelir.</span><span class="en">Yes. You record with your iPhone's GPS. If watches like Garmin, Polar or Huawei write to Apple Health, their workouts arrive automatically too.</span></p></details>
+        <details><summary><span class="tr">Rotalar nasıl oluşturuluyor?</span><span class="en">How are routes created?</span></summary><p><span class="tr">Bir kategoriye dokunduğunda, bulunduğun yerden başlayıp dönen turlar Apple Haritalar yol ağı üzerinden hesaplanır. Yol ve patika durumunu sahada kontrol etmeyi unutma.</span><span class="en">When you tap a category, loops that start and end where you are are calculated on the Apple Maps road network. Always check road and trail conditions on site.</span></p></details>
+        <details><summary><span class="tr">Giriş yapmak zorunda mıyım?</span><span class="en">Do I have to sign in?</span></summary><p><span class="tr">Hayır. "Giriş yapmadan devam et" ile tüm özellikleri deneyebilirsin. Sonra Apple ya da Google hesabına bağladığında hiçbir veri kaybolmaz.</span><span class="en">No. "Continue without signing in" lets you try every feature. When you later link an Apple or Google account, nothing is lost.</span></p></details>
+        <details><summary><span class="tr">Aboneliğimi nasıl iptal ederim?</span><span class="en">How do I cancel my subscription?</span></summary><p><span class="tr">iPhone Ayarlar → adın → Abonelikler bölümünden ya da uygulamada Profil → Aboneliği yönet'ten. Dönem sonuna kadar Premium açık kalır.</span><span class="en">In iPhone Settings → your name → Subscriptions, or in the app under Profile → Manage subscription. Premium stays active until the end of the period.</span></p></details>
+        <details><summary><span class="tr">Hangi dilleri destekliyor?</span><span class="en">Which languages are supported?</span></summary><p><span class="tr">Türkçe ve İngilizce. Dil, cihazının diline göre seçilir; Profil → Dil'den değiştirebilirsin.</span><span class="en">Turkish and English. The app follows your device language and you can change it under Profile → Language.</span></p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html"><img src="img/icon.png" alt="">PinePath</a>
+      <p style="margin-top:12px"><span class="tr">Destek ve sorular için:</span><span class="en">Support and questions:</span> <span class="mail">sercan.isleklekler@gmail.com</span> <button type="button" class="btn-ghost" data-copy-mail style="font:600 .75rem var(--font-data);background:none;border:1px solid rgba(255,255,255,.3);color:var(--hero-ink);border-radius:8px;padding:3px 8px;cursor:pointer"><span class="tr">Kopyala</span><span class="en">Copy</span></button></p>
+    </div>
+    <nav aria-label="Yasal">
+      <a href="privacy.html"><span class="tr">Gizlilik Politikası</span><span class="en">Privacy Policy</span></a>
+      <a href="terms.html"><span class="tr">Kullanım Koşulları</span><span class="en">Terms of Use</span></a>
+    </nav>
+    <p class="copy">© <span class="year">2026</span> PinePath</p>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
